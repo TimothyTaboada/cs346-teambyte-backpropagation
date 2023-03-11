@@ -48,5 +48,16 @@ namespace BackPropagation
                 Console.WriteLine("don dokodone");
             }
         }
+
+        private void calcbtn_Click(object sender, EventArgs e)
+        {
+            neuro.setInputs(0, Convert.ToDouble(varin.Text));
+            neuro.setInputs(1, Convert.ToDouble(skewin.Text));
+            neuro.setInputs(2, Convert.ToDouble(curtin.Text));
+            neuro.setInputs(3, Convert.ToDouble(entin.Text));
+
+            neuro.run();
+            output.Text = "" + neuro.getOuputData(0);
+        }
     }
 }
