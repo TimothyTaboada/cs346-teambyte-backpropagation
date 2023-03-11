@@ -130,6 +130,7 @@
             this.clearbtn.TabIndex = 7;
             this.clearbtn.Text = "Clear";
             this.clearbtn.UseVisualStyleBackColor = true;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // label3
             // 

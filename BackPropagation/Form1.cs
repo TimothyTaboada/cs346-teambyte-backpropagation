@@ -59,5 +59,14 @@ namespace BackPropagation
             neuro.run();
             output.Text = "" + neuro.getOuputData(0);
         }
+
+        private void clearbtn_Click(object sender, EventArgs e)
+        {
+            varin.Text = "";
+            skewin.Text = "";
+            curtin.Text = "";
+            entin.Text = "";
+            output.Text = "";
+        }
     }
 }
