@@ -1,4 +1,4 @@
-variance,skewness,curtosis,entropy,class
+variance,skewness,curtosis,entropy,classification
 2.994,7.2011,-1.2153,0.3211,0
 -0.41645,0.32487,-0.33617,-0.36036,1
 0.49571,10.2243,-1.097,-4.0159,0
