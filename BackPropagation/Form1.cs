@@ -68,5 +68,17 @@ namespace BackPropagation
             entin.Text = "";
             output.Text = "";
         }
+
+        private void savebtn_Click(object sender, EventArgs e)
+        {
+            neuro.saveWeights("../wei.txt");
+            Console.WriteLine("saved");
+        }
+
+        private void loadbtn_Click(object sender, EventArgs e)
+        {
+            neuro.loadWeights("../wei.txt");
+            Console.WriteLine("loaded");
+        }
     }
 }

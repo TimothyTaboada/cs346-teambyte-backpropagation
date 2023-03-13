@@ -50,6 +50,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.output = new System.Windows.Forms.TextBox();
             this.calcbtn = new System.Windows.Forms.Button();
+            this.savebtn = new System.Windows.Forms.Button();
+            this.loadbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -96,7 +98,7 @@
             // trainbtn
             // 
             this.trainbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trainbtn.Location = new System.Drawing.Point(415, 318);
+            this.trainbtn.Location = new System.Drawing.Point(415, 290);
             this.trainbtn.Name = "trainbtn";
             this.trainbtn.Size = new System.Drawing.Size(235, 35);
             this.trainbtn.TabIndex = 4;
@@ -106,7 +108,7 @@
             // 
             // trainepochin
             // 
-            this.trainepochin.Location = new System.Drawing.Point(415, 276);
+            this.trainepochin.Location = new System.Drawing.Point(415, 248);
             this.trainepochin.Name = "trainepochin";
             this.trainepochin.Size = new System.Drawing.Size(235, 20);
             this.trainepochin.TabIndex = 5;
@@ -115,7 +117,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(416, 234);
+            this.label2.Location = new System.Drawing.Point(416, 206);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(234, 24);
             this.label2.TabIndex = 6;
@@ -124,7 +126,7 @@
             // clearbtn
             // 
             this.clearbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(415, 377);
+            this.clearbtn.Location = new System.Drawing.Point(415, 388);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(235, 35);
             this.clearbtn.TabIndex = 7;
@@ -146,7 +148,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(400, 9);
+            this.label4.Location = new System.Drawing.Point(400, 4);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(264, 192);
             this.label4.TabIndex = 9;
@@ -253,11 +255,35 @@
             this.calcbtn.UseVisualStyleBackColor = true;
             this.calcbtn.Click += new System.EventHandler(this.calcbtn_Click);
             // 
+            // savebtn
+            // 
+            this.savebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.savebtn.Location = new System.Drawing.Point(445, 340);
+            this.savebtn.Name = "savebtn";
+            this.savebtn.Size = new System.Drawing.Size(77, 35);
+            this.savebtn.TabIndex = 21;
+            this.savebtn.Text = "Save";
+            this.savebtn.UseVisualStyleBackColor = true;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
+            // 
+            // loadbtn
+            // 
+            this.loadbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loadbtn.Location = new System.Drawing.Point(543, 340);
+            this.loadbtn.Name = "loadbtn";
+            this.loadbtn.Size = new System.Drawing.Size(77, 35);
+            this.loadbtn.TabIndex = 22;
+            this.loadbtn.Text = "Load";
+            this.loadbtn.UseVisualStyleBackColor = true;
+            this.loadbtn.Click += new System.EventHandler(this.loadbtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 450);
+            this.Controls.Add(this.loadbtn);
+            this.Controls.Add(this.savebtn);
             this.Controls.Add(this.calcbtn);
             this.Controls.Add(this.output);
             this.Controls.Add(this.label9);
@@ -312,6 +338,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox output;
         private System.Windows.Forms.Button calcbtn;
+        private System.Windows.Forms.Button savebtn;
+        private System.Windows.Forms.Button loadbtn;
     }
 }
 
