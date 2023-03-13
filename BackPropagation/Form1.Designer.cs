@@ -33,9 +33,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.trainbtn = new System.Windows.Forms.Button();
-            this.trainepochin = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.clearbtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,8 +47,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.output = new System.Windows.Forms.TextBox();
             this.calcbtn = new System.Windows.Forms.Button();
-            this.savebtn = new System.Windows.Forms.Button();
-            this.loadbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -80,7 +75,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.LightGreen;
             this.pictureBox3.Location = new System.Drawing.Point(-2, -2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(377, 45);
+            this.pictureBox3.Size = new System.Drawing.Size(666, 45);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
@@ -94,34 +89,6 @@
             this.label1.Size = new System.Drawing.Size(219, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Fake Money Identifier";
-            // 
-            // trainbtn
-            // 
-            this.trainbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trainbtn.Location = new System.Drawing.Point(415, 290);
-            this.trainbtn.Name = "trainbtn";
-            this.trainbtn.Size = new System.Drawing.Size(235, 35);
-            this.trainbtn.TabIndex = 4;
-            this.trainbtn.Text = "Train";
-            this.trainbtn.UseVisualStyleBackColor = true;
-            this.trainbtn.Click += new System.EventHandler(this.trainbtn_Click);
-            // 
-            // trainepochin
-            // 
-            this.trainepochin.Location = new System.Drawing.Point(415, 248);
-            this.trainepochin.Name = "trainepochin";
-            this.trainepochin.Size = new System.Drawing.Size(235, 20);
-            this.trainepochin.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(416, 206);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(234, 24);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Enter # of Training Epochs";
             // 
             // clearbtn
             // 
@@ -148,7 +115,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(400, 4);
+            this.label4.Location = new System.Drawing.Point(400, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(264, 192);
             this.label4.TabIndex = 9;
@@ -255,35 +222,12 @@
             this.calcbtn.UseVisualStyleBackColor = true;
             this.calcbtn.Click += new System.EventHandler(this.calcbtn_Click);
             // 
-            // savebtn
-            // 
-            this.savebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(445, 340);
-            this.savebtn.Name = "savebtn";
-            this.savebtn.Size = new System.Drawing.Size(77, 35);
-            this.savebtn.TabIndex = 21;
-            this.savebtn.Text = "Save";
-            this.savebtn.UseVisualStyleBackColor = true;
-            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
-            // 
-            // loadbtn
-            // 
-            this.loadbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loadbtn.Location = new System.Drawing.Point(543, 340);
-            this.loadbtn.Name = "loadbtn";
-            this.loadbtn.Size = new System.Drawing.Size(77, 35);
-            this.loadbtn.TabIndex = 22;
-            this.loadbtn.Text = "Load";
-            this.loadbtn.UseVisualStyleBackColor = true;
-            this.loadbtn.Click += new System.EventHandler(this.loadbtn_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(668, 450);
-            this.Controls.Add(this.loadbtn);
-            this.Controls.Add(this.savebtn);
             this.Controls.Add(this.calcbtn);
             this.Controls.Add(this.output);
             this.Controls.Add(this.label9);
@@ -298,9 +242,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.clearbtn);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.trainepochin);
-            this.Controls.Add(this.trainbtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -321,9 +262,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button trainbtn;
-        private System.Windows.Forms.TextBox trainepochin;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button clearbtn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -338,8 +276,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox output;
         private System.Windows.Forms.Button calcbtn;
-        private System.Windows.Forms.Button savebtn;
-        private System.Windows.Forms.Button loadbtn;
     }
 }
 

@@ -22,31 +22,8 @@ namespace BackPropagation
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void trainbtn_Click(object sender, EventArgs e)
-        {
-            // reading training data from file
-            using (var reader = new StreamReader("../../../trainingset.csv"))
-            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
-            {
-                var records = csv.GetRecords<TrainingData>().ToList();
-
-                // training starts here
-                for(int x = 0; x < Convert.ToInt32(trainepochin.Text); x++)
-                {
-                    foreach (var record in records)
-                    {
-                        neuro.setInputs(0, record.variance);
-                        neuro.setInputs(1, record.skewness);
-                        neuro.setInputs(2, record.curtosis);
-                        neuro.setInputs(3, record.entropy);
-                        neuro.setDesiredOutput(0, record.classification);
-                        neuro.learn();
-                    }
-                }
-                Console.WriteLine("don dokodone");
-            }
+            neuro.loadWeights("../../wei.txt");
+            Console.WriteLine("loaded");
         }
 
         private void calcbtn_Click(object sender, EventArgs e)
@@ -67,18 +44,6 @@ namespace BackPropagation
             curtin.Text = "";
             entin.Text = "";
             output.Text = "";
-        }
-
-        private void savebtn_Click(object sender, EventArgs e)
-        {
-            neuro.saveWeights("../wei.txt");
-            Console.WriteLine("saved");
-        }
-
-        private void loadbtn_Click(object sender, EventArgs e)
-        {
-            neuro.loadWeights("../wei.txt");
-            Console.WriteLine("loaded");
         }
     }
 }
